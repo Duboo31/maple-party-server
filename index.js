@@ -3,12 +3,8 @@ const app = express();
 const port = 5000;
 import mongoose from "mongoose";
 
-import config from "./config/mongoPW.js";
-
 mongoose
-  .connect(
-    `mongodb+srv://duboo31:${config.MONGODB_PASSWORD}@mapleparty.2ly3r.mongodb.net/`
-  )
+  .connect(`mongodb+srv://duboo31:@mapleparty.2ly3r.mongodb.net/`)
   .then(() => console.log("MongoDB 연결 성공..."))
   .catch((err) => console.log(err));
 
